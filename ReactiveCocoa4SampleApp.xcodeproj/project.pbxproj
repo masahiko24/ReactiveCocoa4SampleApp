@@ -14,6 +14,10 @@
 		D6BB50AF1D1CE20600A05F51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BB50AD1D1CE20600A05F51 /* LaunchScreen.storyboard */; };
 		D6BB50BA1D1CE20600A05F51 /* ReactiveCocoa4SampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB50B91D1CE20600A05F51 /* ReactiveCocoa4SampleAppTests.swift */; };
 		D6BB50C51D1CE20600A05F51 /* ReactiveCocoa4SampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB50C41D1CE20600A05F51 /* ReactiveCocoa4SampleAppUITests.swift */; };
+		D6BB50D41D1EAAD200A05F51 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BB50D21D1EAAD200A05F51 /* ReactiveCocoa.framework */; };
+		D6BB50D51D1EAAD200A05F51 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6BB50D21D1EAAD200A05F51 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D6BB50D61D1EAAD200A05F51 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BB50D31D1EAAD200A05F51 /* Result.framework */; };
+		D6BB50D71D1EAAD200A05F51 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6BB50D31D1EAAD200A05F51 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D6BB50D81D1EAAD200A05F51 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D6BB50D51D1EAAD200A05F51 /* ReactiveCocoa.framework in Embed Frameworks */,
+				D6BB50D71D1EAAD200A05F51 /* Result.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D6BB50A11D1CE20600A05F51 /* ReactiveCocoa4SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa4SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BB50A41D1CE20600A05F51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +66,8 @@
 		D6BB50C01D1CE20600A05F51 /* ReactiveCocoa4SampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveCocoa4SampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BB50C41D1CE20600A05F51 /* ReactiveCocoa4SampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveCocoa4SampleAppUITests.swift; sourceTree = "<group>"; };
 		D6BB50C61D1CE20600A05F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6BB50D21D1EAAD200A05F51 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		D6BB50D31D1EAAD200A05F51 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6BB50D41D1EAAD200A05F51 /* ReactiveCocoa.framework in Frameworks */,
+				D6BB50D61D1EAAD200A05F51 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +104,7 @@
 				D6BB50B81D1CE20600A05F51 /* ReactiveCocoa4SampleAppTests */,
 				D6BB50C31D1CE20600A05F51 /* ReactiveCocoa4SampleAppUITests */,
 				D6BB50A21D1CE20600A05F51 /* Products */,
+				D6BB50D91D1EAAD800A05F51 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +149,15 @@
 			path = ReactiveCocoa4SampleAppUITests;
 			sourceTree = "<group>";
 		};
+		D6BB50D91D1EAAD800A05F51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6BB50D21D1EAAD200A05F51 /* ReactiveCocoa.framework */,
+				D6BB50D31D1EAAD200A05F51 /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +168,7 @@
 				D6BB509D1D1CE20600A05F51 /* Sources */,
 				D6BB509E1D1CE20600A05F51 /* Frameworks */,
 				D6BB509F1D1CE20600A05F51 /* Resources */,
+				D6BB50D81D1EAAD200A05F51 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -349,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -389,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -401,6 +435,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReactiveCocoa4SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.masahikotsujita.ReactiveCocoa4SampleApp;
@@ -412,6 +450,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReactiveCocoa4SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.masahikotsujita.ReactiveCocoa4SampleApp;
@@ -484,6 +526,7 @@
 				D6BB50CB1D1CE20600A05F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6BB50CC1D1CE20600A05F51 /* Build configuration list for PBXNativeTarget "ReactiveCocoa4SampleAppTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +535,7 @@
 				D6BB50CE1D1CE20600A05F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6BB50CF1D1CE20600A05F51 /* Build configuration list for PBXNativeTarget "ReactiveCocoa4SampleAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +544,7 @@
 				D6BB50D11D1CE20600A05F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
