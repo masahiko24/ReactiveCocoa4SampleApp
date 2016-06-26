@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  LoginFormViewController.swift
 //  ReactiveCocoa4SampleApp
 //
-//  Created by Masahiko Tsujita on 2016/06/24.
+//  Created by Masahiko Tsujita on 2016/06/25.
 //  Copyright © 2016年 Masahiko Tsujita. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginFormViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

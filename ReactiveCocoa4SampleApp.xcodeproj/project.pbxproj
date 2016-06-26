@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D6BB50A51D1CE20600A05F51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB50A41D1CE20600A05F51 /* AppDelegate.swift */; };
-		D6BB50A71D1CE20600A05F51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB50A61D1CE20600A05F51 /* ViewController.swift */; };
 		D6BB50AA1D1CE20600A05F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BB50A81D1CE20600A05F51 /* Main.storyboard */; };
 		D6BB50AC1D1CE20600A05F51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BB50AB1D1CE20600A05F51 /* Assets.xcassets */; };
 		D6BB50AF1D1CE20600A05F51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BB50AD1D1CE20600A05F51 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,8 @@
 		D6BB50D51D1EAAD200A05F51 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6BB50D21D1EAAD200A05F51 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D6BB50D61D1EAAD200A05F51 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BB50D31D1EAAD200A05F51 /* Result.framework */; };
 		D6BB50D71D1EAAD200A05F51 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6BB50D31D1EAAD200A05F51 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D6FC35131D1ECA5B0065485A /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FC35121D1ECA5B0065485A /* MessageTableViewController.swift */; };
+		D6FC35151D1ECA790065485A /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FC35141D1ECA790065485A /* LoginFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,6 @@
 /* Begin PBXFileReference section */
 		D6BB50A11D1CE20600A05F51 /* ReactiveCocoa4SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa4SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BB50A41D1CE20600A05F51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D6BB50A61D1CE20600A05F51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D6BB50A91D1CE20600A05F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6BB50AB1D1CE20600A05F51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6BB50AE1D1CE20600A05F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,6 +68,8 @@
 		D6BB50C61D1CE20600A05F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6BB50D21D1EAAD200A05F51 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		D6BB50D31D1EAAD200A05F51 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		D6FC35121D1ECA5B0065485A /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		D6FC35141D1ECA790065485A /* LoginFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				D6BB50A41D1CE20600A05F51 /* AppDelegate.swift */,
-				D6BB50A61D1CE20600A05F51 /* ViewController.swift */,
+				D6FC35121D1ECA5B0065485A /* MessageTableViewController.swift */,
+				D6FC35141D1ECA790065485A /* LoginFormViewController.swift */,
 				D6BB50A81D1CE20600A05F51 /* Main.storyboard */,
 				D6BB50AB1D1CE20600A05F51 /* Assets.xcassets */,
 				D6BB50AD1D1CE20600A05F51 /* LaunchScreen.storyboard */,
@@ -290,7 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6BB50A71D1CE20600A05F51 /* ViewController.swift in Sources */,
+				D6FC35151D1ECA790065485A /* LoginFormViewController.swift in Sources */,
+				D6FC35131D1ECA5B0065485A /* MessageTableViewController.swift in Sources */,
 				D6BB50A51D1CE20600A05F51 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
