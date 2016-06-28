@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D63377111D2007F700866946 /* LoginFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63377101D2007F700866946 /* LoginFormViewModel.swift */; };
+		D63377131D2034D400866946 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63377121D2034D400866946 /* Client.swift */; };
+		D63377151D22B11300866946 /* Client+ReactiveCocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63377141D22B11300866946 /* Client+ReactiveCocoa.swift */; };
 		D6BB50A51D1CE20600A05F51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB50A41D1CE20600A05F51 /* AppDelegate.swift */; };
 		D6BB50AA1D1CE20600A05F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BB50A81D1CE20600A05F51 /* Main.storyboard */; };
 		D6BB50AC1D1CE20600A05F51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BB50AB1D1CE20600A05F51 /* Assets.xcassets */; };
@@ -54,6 +57,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D63377101D2007F700866946 /* LoginFormViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormViewModel.swift; sourceTree = "<group>"; };
+		D63377121D2034D400866946 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		D63377141D22B11300866946 /* Client+ReactiveCocoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Client+ReactiveCocoa.swift"; sourceTree = "<group>"; };
 		D6BB50A11D1CE20600A05F51 /* ReactiveCocoa4SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa4SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BB50A41D1CE20600A05F51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6BB50A91D1CE20600A05F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,6 +133,9 @@
 				D6FC35121D1ECA5B0065485A /* MessageTableViewController.swift */,
 				D6FC35141D1ECA790065485A /* LoginFormViewController.swift */,
 				D6BB50A81D1CE20600A05F51 /* Main.storyboard */,
+				D63377101D2007F700866946 /* LoginFormViewModel.swift */,
+				D63377121D2034D400866946 /* Client.swift */,
+				D63377141D22B11300866946 /* Client+ReactiveCocoa.swift */,
 				D6BB50AB1D1CE20600A05F51 /* Assets.xcassets */,
 				D6BB50AD1D1CE20600A05F51 /* LaunchScreen.storyboard */,
 				D6BB50B01D1CE20600A05F51 /* Info.plist */,
@@ -293,8 +302,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63377111D2007F700866946 /* LoginFormViewModel.swift in Sources */,
 				D6FC35151D1ECA790065485A /* LoginFormViewController.swift in Sources */,
 				D6FC35131D1ECA5B0065485A /* MessageTableViewController.swift in Sources */,
+				D63377151D22B11300866946 /* Client+ReactiveCocoa.swift in Sources */,
+				D63377131D2034D400866946 /* Client.swift in Sources */,
 				D6BB50A51D1CE20600A05F51 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -86,12 +86,6 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHC-gk-Bkf">
-                                                        <rect key="frame" x="0.0" y="30" width="240" height="0.0"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BJl-t9-64C">
@@ -105,12 +99,6 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eu9-9R-qMU">
-                                                        <rect key="frame" x="0.0" y="30" width="240" height="0.0"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -131,6 +119,12 @@
                     <navigationItem key="navigationItem" title="Title" id="Yeq-Qe-xiE">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5fc-ES-EKL"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cancelButtonItem" destination="5fc-ES-EKL" id="Luo-fR-jJW"/>
+                        <outlet property="loginButton" destination="fuB-MN-7a2" id="UaS-KQ-X0h"/>
+                        <outlet property="passwordField" destination="gPg-jU-iga" id="W6C-sE-3ee"/>
+                        <outlet property="usernameField" destination="CH6-J4-OzN" id="0jB-3G-H0C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BN0-l4-uUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
