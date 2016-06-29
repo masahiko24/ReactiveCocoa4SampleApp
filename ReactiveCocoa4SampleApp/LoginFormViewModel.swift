@@ -12,21 +12,23 @@ import ReactiveCocoa
 
 class LoginFormViewModel {
     
-    var username = MutableProperty("")
-    
-    var password = MutableProperty("")
-    
-    var loginAction: Action<Void, String, Client.LoginError>!
     
     init() {
-        let canLogin = combineLatest(
-            username.signal,
-            password.signal)
+        self.username = MutableProperty("")
+        self.password = MutableProperty("")
+        
+        let canLogin = combineLatest(self.username.signal, self.password.signal)
             .map { !$0.0.isEmpty && $0.1.characters.count >= 8 }
         
-        loginAction = Action(enabledIf: AnyProperty(initialValue: false, signal: canLogin)) {
+        self.loginAction = Action(enabledIf: AnyProperty(initialValue: false, signal: canLogin)) {
             return Client.sharedClient.login(username: self.username.value, password: self.password.value)
         }
     }
 
+    let username: MutableProperty<String>
+    
+    let password: MutableProperty<String>
+    
+    private(set) var loginAction: Action<Void, String, Client.LoginError>!
+    
 }
