@@ -12,6 +12,7 @@ import ReactiveCocoa
 
 class LoginFormViewModel {
     
+    // MARK: - Initializers
     
     init() {
         self.username = MutableProperty("")
@@ -25,9 +26,13 @@ class LoginFormViewModel {
         }
     }
 
+    // MARK: - Properties
+    
     let username: MutableProperty<String>
     
     let password: MutableProperty<String>
+    
+    // MARK: - Actions
     
     private(set) var loginAction: Action<Void, String, Client.LoginError>!
     
