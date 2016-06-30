@@ -58,10 +58,16 @@ class LoginFormViewController: UIViewController {
             
             // subscribe login results
             loginAction.values.observeNext { (token) in
-                print("login succeeded. auth token is \(token)")
+                let alert = UIAlertController(title: "Login Succeeded", message: "Access token is \(token)", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in
+                    self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+                })
+                self.presentViewController(alert, animated: true, completion: nil)
             }
             loginAction.errors.observeNext { (error) in
-                print("login failed.")
+                let alert = UIAlertController(title: "Login Failed", message: "Please confirm that both username and password are correct.", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
             }
         }
     }
