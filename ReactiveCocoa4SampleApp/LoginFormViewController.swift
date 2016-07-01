@@ -51,6 +51,8 @@ class LoginFormViewController: UIViewController {
                 return loginAction.apply()
                     .map { $0 as AnyObject }
             }))
+            
+            // bind cancel action
             cancelButtonItem.rac_command = toRACCommand(Action({ (button: AnyObject?) -> SignalProducer<AnyObject, NoError> in
                 self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
                 return SignalProducer<AnyObject, NoError>.empty
