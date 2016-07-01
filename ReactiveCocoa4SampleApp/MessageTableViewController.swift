@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 class MessageTableViewController: UITableViewController {
 
@@ -82,14 +83,21 @@ class MessageTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "LoginFormSegue" {
+            let loginForm = (segue.destinationViewController as! UINavigationController).topViewController as! LoginFormViewController
+            loginForm.promise.observeCompleted {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            loginForm.promise.observeInterrupted {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        } else {
+            assertionFailure("Unknown storyboard segue is performed!")
+        }
     }
-    */
 
 }

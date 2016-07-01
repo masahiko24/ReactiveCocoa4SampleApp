@@ -54,7 +54,7 @@ class LoginFormViewController: UIViewController {
             
             // bind cancel action
             cancelButtonItem.rac_command = toRACCommand(Action({ (button: AnyObject?) -> SignalProducer<AnyObject, NoError> in
-                self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+                self.pipe.1.sendInterrupted()
                 return .empty
             }))
             
@@ -62,7 +62,8 @@ class LoginFormViewController: UIViewController {
             loginAction.values.observeNext { (token) in
                 let alert = UIAlertController(title: "Login Succeeded", message: "Access token is \(token)", preferredStyle: .Alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in
-                    self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+                    self.pipe.1.sendCompleted()
+                    
                 })
                 self.presentViewController(alert, animated: true, completion: nil)
             }
@@ -80,5 +81,10 @@ class LoginFormViewController: UIViewController {
         super.viewDidLoad()
         self.viewModel = LoginFormViewModel()
     }
+    
+    // MARK: - Promise
+    
+    private let pipe = Signal<String, NoError>.pipe()
+    var promise: Signal<String, NoError> { return pipe.0 }
     
 }

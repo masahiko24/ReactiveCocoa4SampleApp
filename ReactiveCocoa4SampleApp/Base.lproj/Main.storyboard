@@ -31,7 +31,7 @@
                     <navigationItem key="navigationItem" title="Title" id="a51-DI-ei8">
                         <barButtonItem key="leftBarButtonItem" title="Login" id="P8m-52-UhO">
                             <connections>
-                                <segue destination="piD-Fk-N6g" kind="presentation" id="ER6-0C-kaY"/>
+                                <segue destination="piD-Fk-N6g" kind="presentation" identifier="LoginFormSegue" id="ER6-0C-kaY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
