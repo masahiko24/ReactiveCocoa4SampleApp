@@ -55,7 +55,7 @@ class LoginFormViewController: UIViewController {
             // bind cancel action
             cancelButtonItem.rac_command = toRACCommand(Action({ (button: AnyObject?) -> SignalProducer<AnyObject, NoError> in
                 self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-                return SignalProducer<AnyObject, NoError>.empty
+                return .empty
             }))
             
             // subscribe login results
