@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Timeline-->
         <scene sceneID="Vjh-My-Maq">
             <objects>
                 <tableViewController id="taH-vd-xGY" customClass="MessageTableViewController" customModule="ReactiveCocoa4SampleApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="a51-DI-ei8">
+                    <navigationItem key="navigationItem" title="Timeline" id="a51-DI-ei8">
                         <barButtonItem key="leftBarButtonItem" title="Login" id="P8m-52-UhO">
                             <connections>
                                 <segue destination="piD-Fk-N6g" kind="presentation" identifier="LoginFormSegue" id="ER6-0C-kaY"/>
@@ -57,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="1365" y="59"/>
         </scene>
-        <!--Title-->
+        <!--Login-->
         <scene sceneID="eB5-3f-qYK">
             <objects>
                 <viewController id="DVn-HK-Q11" customClass="LoginFormViewController" customModule="ReactiveCocoa4SampleApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,6 +105,7 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuB-MN-7a2">
                                         <rect key="frame" x="0.0" y="84" width="240" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Login"/>
                                     </button>
                                 </subviews>
@@ -116,7 +117,7 @@
                             <constraint firstItem="Mrc-YU-a07" firstAttribute="centerY" secondItem="6LJ-17-8WH" secondAttribute="centerY" id="mCH-qM-Azh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Yeq-Qe-xiE">
+                    <navigationItem key="navigationItem" title="Login" id="Yeq-Qe-xiE">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5fc-ES-EKL"/>
                     </navigationItem>
                     <connections>
