@@ -53,17 +53,17 @@ class LoginFormViewController: UIViewController {
             }))
             
             // bind cancel action
-            cancelButtonItem.rac_command = toRACCommand(Action({ (button: AnyObject?) -> SignalProducer<AnyObject, NoError> in
+            cancelButtonItem.rac_command = toRACCommand(Action({ [unowned self] (button: AnyObject?) -> SignalProducer<AnyObject, NoError> in
                 self.pipe.1.sendInterrupted()
                 return .empty
             }))
             
             // subscribe login results
-            loginAction.values.observeNext { (token) in
+            loginAction.values.observeNext { [unowned self] (token) in
                 self.presentAlert(title: "Login Succeeded", message: "Access token is \(token).", preferredStyle: .Alert, actionTitle: "OK", actionStyle: .Default)
-                    .startWithCompleted { self.pipe.1.sendCompleted() }
+                    .startWithCompleted { [unowned self] in self.pipe.1.sendCompleted() }
             }
-            loginAction.errors.observeNext { (error) in
+            loginAction.errors.observeNext { [unowned self] (error) in
                 self.presentAlert(title: "Login Failed", message: "Please confirm that both username and password are correct.", preferredStyle: .Alert, actionTitle: "OK", actionStyle: .Default)
                     .start()
             }

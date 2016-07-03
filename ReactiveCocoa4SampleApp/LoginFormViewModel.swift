@@ -21,7 +21,7 @@ class LoginFormViewModel {
         let canLogin = combineLatest(self.username.signal, self.password.signal)
             .map { !$0.0.isEmpty && $0.1.characters.count >= 8 }
         
-        self.loginAction = Action(enabledIf: AnyProperty(initialValue: false, signal: canLogin)) {
+        self.loginAction = Action(enabledIf: AnyProperty(initialValue: false, signal: canLogin)) { [unowned self] in
             return Client.sharedClient.login(username: self.username.value, password: self.password.value)
         }
     }
