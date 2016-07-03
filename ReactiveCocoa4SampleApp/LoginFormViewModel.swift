@@ -12,7 +12,7 @@ import ReactiveCocoa
 
 class LoginFormViewModel {
     
-    // MARK: - Initializers
+    // MARK: - Initializing A View Model
     
     init() {
         self.username = MutableProperty("")
@@ -38,17 +38,15 @@ class LoginFormViewModel {
         }
     }
 
-    // MARK: - Properties
+    // MARK: - Performing Login To The Service
     
     let username: MutableProperty<String>
     
     let password: MutableProperty<String>
     
-    // MARK: - Actions
-    
     private(set) var loginAction: Action<Void, String, Client.LoginError>!
     
-    // MARK: - Error Descriptions Of Username And Password
+    // MARK: - Describing Issues Of Username Or Password
     
     /// The text describing issues of username and password
     let error: Signal<String?, NoError>
