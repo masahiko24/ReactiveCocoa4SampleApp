@@ -69,7 +69,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Mrc-YU-a07">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mrc-YU-a07">
                                 <rect key="frame" x="180" y="243" width="240" height="114"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="P92-vc-Fz2">
@@ -103,6 +103,12 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el4-7x-zYH">
+                                        <rect key="frame" x="0.0" y="76" width="240" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuB-MN-7a2">
                                         <rect key="frame" x="0.0" y="84" width="240" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
@@ -122,6 +128,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cancelButtonItem" destination="5fc-ES-EKL" id="Luo-fR-jJW"/>
+                        <outlet property="errorLabel" destination="el4-7x-zYH" id="7eg-9k-dAf"/>
                         <outlet property="loginButton" destination="fuB-MN-7a2" id="UaS-KQ-X0h"/>
                         <outlet property="passwordField" destination="gPg-jU-iga" id="W6C-sE-3ee"/>
                         <outlet property="usernameField" destination="CH6-J4-OzN" id="0jB-3G-H0C"/>

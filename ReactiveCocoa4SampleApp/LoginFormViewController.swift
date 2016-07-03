@@ -18,6 +18,8 @@ class LoginFormViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var errorLabel: UILabel!
+    
     @IBOutlet weak var loginButton: UIButton!
     
     // MARK: - Cancel Button
@@ -57,6 +59,20 @@ class LoginFormViewController: UIViewController {
                 self.pipe.1.sendInterrupted()
                 return .empty
             }))
+            
+            // bind error
+            
+            usernameField.rac_signalForControlEvents(.EditingDidEnd)
+                .toSignalProducer()
+                .startWithNext { [unowned self] _ in self.viewModel.usernameErrorUpdateAction.apply().start() }
+            
+            passwordField.rac_signalForControlEvents(.EditingDidEnd)
+                .toSignalProducer()
+                .startWithNext { [unowned self] _ in self.viewModel.passwordErrorUpdateAction.apply().start() }
+            
+            viewModel.error.observeNext { [unowned self] (error) in
+                self.errorLabel.text = error
+            }
             
             // subscribe login results
             loginAction.values.observeNext { [unowned self] (token) in
