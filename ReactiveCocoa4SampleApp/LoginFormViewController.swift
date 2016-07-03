@@ -83,6 +83,11 @@ class LoginFormViewController: UIViewController {
                 self.presentAlert(title: "Login Failed", message: "Please confirm that both username and password are correct.", preferredStyle: .Alert, actionTitle: "OK", actionStyle: .Default)
                     .start()
             }
+            
+            // move to next field on tapping return key in inputting username
+            self.usernameField.rac_signalForControlEvents(.EditingDidEndOnExit)
+                .toSignalProducer()
+                .startWithNext { [unowned self] _ in self.passwordField.becomeFirstResponder() }
         }
     }
     
