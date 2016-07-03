@@ -48,7 +48,7 @@ class LoginFormViewModel {
     
     private(set) var loginAction: Action<Void, String, Client.LoginError>!
     
-    // MARK: - Error Descriptions Of
+    // MARK: - Error Descriptions Of Username And Password
     
     /// The text describing issues of username and password
     let error: Signal<String?, NoError>
