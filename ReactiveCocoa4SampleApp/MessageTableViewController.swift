@@ -89,10 +89,10 @@ class MessageTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "LoginFormSegue" {
             let loginForm = (segue.destinationViewController as! UINavigationController).topViewController as! LoginFormViewController
-            loginForm.promise.observeCompleted {
+            loginForm.signal.observeCompleted {
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
-            loginForm.promise.observeInterrupted {
+            loginForm.signal.observeInterrupted {
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         } else {

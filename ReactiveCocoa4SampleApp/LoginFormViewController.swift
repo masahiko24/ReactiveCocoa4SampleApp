@@ -111,6 +111,6 @@ class LoginFormViewController: UIViewController {
     // MARK: - Promise
     
     private let pipe = Signal<String, NoError>.pipe()
-    var promise: Signal<String, NoError> { return pipe.0 }
+    var signal: Signal<String, NoError> { return pipe.0 }
     
 }
