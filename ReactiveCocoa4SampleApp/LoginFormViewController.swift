@@ -88,6 +88,16 @@ class LoginFormViewController: UIViewController {
             self.usernameField.rac_signalForControlEvents(.EditingDidEndOnExit)
                 .toSignalProducer()
                 .startWithNext { [unowned self] _ in self.passwordField.becomeFirstResponder() }
+            
+            // perform login on tapping return key in inputting password
+            self.passwordField.rac_signalForControlEvents(.EditingDidEndOnExit)
+                .toSignalProducer()
+                .startWithNext { [unowned self] _ in
+                    let loginAction = self.viewModel.loginAction
+                    if loginAction.enabled.value {
+                        loginAction.apply().start()
+                    }
+                }
         }
     }
     
