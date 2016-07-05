@@ -38,14 +38,10 @@ class LoginFormViewController: UIViewController {
             // bind viewmodel
             
             // bind username and password
-            let usernameSignal = usernameField.rac_textSignal().toSignalProducer()
-                .map { $0 as! String }
-                .flatMapError { _ in SignalProducer<String, NoError>.empty }
-            let passwordSignal = passwordField.rac_textSignal().toSignalProducer()
-                .map { $0 as! String }
-                .flatMapError { _ in SignalProducer<String, NoError>.empty }
-            viewModel.username <~ usernameSignal
-            viewModel.password <~ passwordSignal
+            viewModel.username <~ usernameField.textSignalProducer
+                .map { $0 ?? "" }
+            viewModel.password <~ passwordField.textSignalProducer
+                .map { $0 ?? "" }
             
             // bind login action
             let loginAction = viewModel.loginAction
@@ -62,12 +58,10 @@ class LoginFormViewController: UIViewController {
             
             // bind error
             
-            usernameField.rac_signalForControlEvents(.EditingDidEnd)
-                .toSignalProducer()
+            usernameField.signalProducer(forControlEvents: .EditingDidEnd)
                 .startWithNext { [unowned self] _ in self.viewModel.usernameErrorUpdateAction.apply().start() }
             
-            passwordField.rac_signalForControlEvents(.EditingDidEnd)
-                .toSignalProducer()
+            passwordField.signalProducer(forControlEvents: .EditingDidEnd)
                 .startWithNext { [unowned self] _ in self.viewModel.passwordErrorUpdateAction.apply().start() }
             
             viewModel.error.observeNext { [unowned self] (error) in
@@ -85,13 +79,11 @@ class LoginFormViewController: UIViewController {
             }
             
             // move to next field on tapping return key in inputting username
-            self.usernameField.rac_signalForControlEvents(.EditingDidEndOnExit)
-                .toSignalProducer()
+            self.usernameField.signalProducer(forControlEvents: .EditingDidEndOnExit)
                 .startWithNext { [unowned self] _ in self.passwordField.becomeFirstResponder() }
             
             // perform login on tapping return key in inputting password
-            self.passwordField.rac_signalForControlEvents(.EditingDidEndOnExit)
-                .toSignalProducer()
+            self.passwordField.signalProducer(forControlEvents: .EditingDidEndOnExit)
                 .startWithNext { [unowned self] _ in
                     let loginAction = self.viewModel.loginAction
                     if loginAction.enabled.value {

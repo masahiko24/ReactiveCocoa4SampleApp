@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D60EDF541D2A10E70090539D /* UITextField+ReactiveCocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60EDF531D2A10E70090539D /* UITextField+ReactiveCocoa.swift */; };
 		D60F0E051D26B453005B1A48 /* UIAlertController+ReactiveCocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60F0E041D26B453005B1A48 /* UIAlertController+ReactiveCocoa.swift */; };
 		D63377111D2007F700866946 /* LoginFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63377101D2007F700866946 /* LoginFormViewModel.swift */; };
 		D63377131D2034D400866946 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63377121D2034D400866946 /* Client.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D60EDF531D2A10E70090539D /* UITextField+ReactiveCocoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+ReactiveCocoa.swift"; sourceTree = "<group>"; };
 		D60F0E041D26B453005B1A48 /* UIAlertController+ReactiveCocoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+ReactiveCocoa.swift"; sourceTree = "<group>"; };
 		D63377101D2007F700866946 /* LoginFormViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormViewModel.swift; sourceTree = "<group>"; };
 		D63377121D2034D400866946 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				D63377121D2034D400866946 /* Client.swift */,
 				D63377141D22B11300866946 /* Client+ReactiveCocoa.swift */,
 				D60F0E041D26B453005B1A48 /* UIAlertController+ReactiveCocoa.swift */,
+				D60EDF531D2A10E70090539D /* UITextField+ReactiveCocoa.swift */,
 				D6BB50AB1D1CE20600A05F51 /* Assets.xcassets */,
 				D6BB50AD1D1CE20600A05F51 /* LaunchScreen.storyboard */,
 				D6BB50B01D1CE20600A05F51 /* Info.plist */,
@@ -309,6 +312,7 @@
 				D60F0E051D26B453005B1A48 /* UIAlertController+ReactiveCocoa.swift in Sources */,
 				D6FC35151D1ECA790065485A /* LoginFormViewController.swift in Sources */,
 				D6FC35131D1ECA5B0065485A /* MessageTableViewController.swift in Sources */,
+				D60EDF541D2A10E70090539D /* UITextField+ReactiveCocoa.swift in Sources */,
 				D63377151D22B11300866946 /* Client+ReactiveCocoa.swift in Sources */,
 				D63377131D2034D400866946 /* Client.swift in Sources */,
 				D6BB50A51D1CE20600A05F51 /* AppDelegate.swift in Sources */,
