@@ -22,6 +22,7 @@
 		D6BB50D51D1EAAD200A05F51 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6BB50D21D1EAAD200A05F51 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D6BB50D61D1EAAD200A05F51 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BB50D31D1EAAD200A05F51 /* Result.framework */; };
 		D6BB50D71D1EAAD200A05F51 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6BB50D31D1EAAD200A05F51 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D6E412291D2EC29F005905DC /* UIControl+ReactiveCocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E412281D2EC29F005905DC /* UIControl+ReactiveCocoa.swift */; };
 		D6FC35131D1ECA5B0065485A /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FC35121D1ECA5B0065485A /* MessageTableViewController.swift */; };
 		D6FC35151D1ECA790065485A /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FC35141D1ECA790065485A /* LoginFormViewController.swift */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,7 @@
 		D6BB50C61D1CE20600A05F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6BB50D21D1EAAD200A05F51 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		D6BB50D31D1EAAD200A05F51 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		D6E412281D2EC29F005905DC /* UIControl+ReactiveCocoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+ReactiveCocoa.swift"; sourceTree = "<group>"; };
 		D6FC35121D1ECA5B0065485A /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		D6FC35141D1ECA790065485A /* LoginFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 				D63377141D22B11300866946 /* Client+ReactiveCocoa.swift */,
 				D60F0E041D26B453005B1A48 /* UIAlertController+ReactiveCocoa.swift */,
 				D60EDF531D2A10E70090539D /* UITextField+ReactiveCocoa.swift */,
+				D6E412281D2EC29F005905DC /* UIControl+ReactiveCocoa.swift */,
 				D6BB50AB1D1CE20600A05F51 /* Assets.xcassets */,
 				D6BB50AD1D1CE20600A05F51 /* LaunchScreen.storyboard */,
 				D6BB50B01D1CE20600A05F51 /* Info.plist */,
@@ -311,6 +314,7 @@
 				D63377111D2007F700866946 /* LoginFormViewModel.swift in Sources */,
 				D60F0E051D26B453005B1A48 /* UIAlertController+ReactiveCocoa.swift in Sources */,
 				D6FC35151D1ECA790065485A /* LoginFormViewController.swift in Sources */,
+				D6E412291D2EC29F005905DC /* UIControl+ReactiveCocoa.swift in Sources */,
 				D6FC35131D1ECA5B0065485A /* MessageTableViewController.swift in Sources */,
 				D60EDF541D2A10E70090539D /* UITextField+ReactiveCocoa.swift in Sources */,
 				D63377151D22B11300866946 /* Client+ReactiveCocoa.swift in Sources */,

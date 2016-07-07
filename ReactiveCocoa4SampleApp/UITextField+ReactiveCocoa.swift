@@ -18,10 +18,4 @@ extension UITextField {
             .flatMapError { _ in .empty }
     }
     
-    func signal(forControlEvents controlEvents: UIControlEvents) -> SignalProducer<Void, NoError> {
-        return self.rac_signalForControlEvents(controlEvents).toSignalProducer()
-            .map { _ in }
-            .flatMapError { _ in .empty }
-    }
-    
 }
