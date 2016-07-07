@@ -12,13 +12,13 @@ import ReactiveCocoa
 
 extension UITextField {
     
-    var textSignalProducer: SignalProducer<String?, NoError> {
+    var textSignal: SignalProducer<String?, NoError> {
         return self.rac_textSignal().toSignalProducer()
             .map { $0 as? String }
             .flatMapError { _ in .empty }
     }
     
-    func signalProducer(forControlEvents controlEvents: UIControlEvents) -> SignalProducer<Void, NoError> {
+    func signal(forControlEvents controlEvents: UIControlEvents) -> SignalProducer<Void, NoError> {
         return self.rac_signalForControlEvents(controlEvents).toSignalProducer()
             .map { _ in }
             .flatMapError { _ in .empty }

@@ -38,9 +38,9 @@ class LoginFormViewController: UIViewController {
             // bind viewmodel
             
             // bind username and password
-            viewModel.username <~ usernameField.textSignalProducer
+            viewModel.username <~ usernameField.textSignal
                 .map { $0 ?? "" }
-            viewModel.password <~ passwordField.textSignalProducer
+            viewModel.password <~ passwordField.textSignal
                 .map { $0 ?? "" }
             
             // bind login action
@@ -58,10 +58,10 @@ class LoginFormViewController: UIViewController {
             
             // bind error
             
-            usernameField.signalProducer(forControlEvents: .EditingDidEnd)
+            usernameField.signal(forControlEvents: .EditingDidEnd)
                 .startWithNext { [unowned self] _ in self.viewModel.usernameErrorUpdateAction.apply().start() }
             
-            passwordField.signalProducer(forControlEvents: .EditingDidEnd)
+            passwordField.signal(forControlEvents: .EditingDidEnd)
                 .startWithNext { [unowned self] _ in self.viewModel.passwordErrorUpdateAction.apply().start() }
             
             viewModel.error.observeNext { [unowned self] (error) in
@@ -79,11 +79,11 @@ class LoginFormViewController: UIViewController {
             }
             
             // move to next field on tapping return key in inputting username
-            self.usernameField.signalProducer(forControlEvents: .EditingDidEndOnExit)
+            self.usernameField.signal(forControlEvents: .EditingDidEndOnExit)
                 .startWithNext { [unowned self] _ in self.passwordField.becomeFirstResponder() }
             
             // perform login on tapping return key in inputting password
-            self.passwordField.signalProducer(forControlEvents: .EditingDidEndOnExit)
+            self.passwordField.signal(forControlEvents: .EditingDidEndOnExit)
                 .startWithNext { [unowned self] _ in
                     let loginAction = self.viewModel.loginAction
                     if loginAction.enabled.value {
